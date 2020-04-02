@@ -9,7 +9,7 @@ const SectionGroup = styled.div`
     grid-template-rows: 200px auto;
     grid-gap: 10px; 
     position: relative;  
-
+    padding: 10px;
     @media (max-width: 640px) {
         ${'' /* height: 820px; */}
     }
@@ -33,7 +33,7 @@ const SectionTitleGroup = styled.div`
     grid-template-columns: 300px auto;
     margin: 0 40px;
     grid-gap: 20px;
-    grid-template-rows: auto 100%;
+    grid-template-rows: auto 90%;
 
     @media (max-width: 720px) {
         grid-template-columns: 1fr;
@@ -42,9 +42,10 @@ const SectionTitleGroup = styled.div`
 
 const SectionTitle = styled.h3`
     color: white;
+    font-weight: 300;
     font-size: 50px;
     margin: auto;
-    line-height: 1.2;
+    line-height: 1.0;
     text-align: center;
     @media (max-width: 720px) {
         font-size: 30px;
@@ -65,8 +66,8 @@ const SectionText = styled.p`
     text-align: justify;
     hyphens: auto;
     position: relative;
-    font-size: 20px;
-    font-weight: 500;
+    font-size: 18px;
+    font-weight: 300;
     @media (max-width: 720px) {
         font-size: 14px;
         padding: 20px;

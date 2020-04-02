@@ -43,7 +43,7 @@ const IndexPage = () => (
     <div className="Hero">
       <div className="HeroGroup">
       <Link to='#about'>
-      <img src={require('../images/printg_stroke.png')} alt="" width="256"/>
+      <img src={require('../images/oi3.png')} alt="" width="256"/>
       </Link> 
         <h1>Nanotechnology and Graphene </h1>
         <h1>Research Centre</h1>
@@ -59,7 +59,7 @@ const IndexPage = () => (
       </div>
     </div>
     <NoWaveSection 
-      image={require('../images/bokeh3.jpg')}
+      image={require('../images/bg/bg_about.png')}
       logo={require('../images/printg_stroke.png')}
       title="About PrintG"
       text="Nanotechnology and Graphene Research Centre (Pusat Riset Pengembangan Institusi Nanoteknologi dan Graphene) named PrintG is a Research Centre at Directorate of Research and Community Development, Universitas Padjadjaran. PrintG is actively engaged in Nano Science and Technology Research & Business Development (RBD) aims to promote innovative technology for Indonesian industries enabling globally competitive scope and to contribute novel alternatives to address the present and future key social challenges. Enabling Nanotechnology to solve real world problems is expected to provide new opportunities with broad perspective of applications. The significant contributions for PrintG are in the field of biomaterial, pharmacy, sustainable energy, sustainable agro & food, added values of natural resources and clean water for a growing population."

@@ -13,7 +13,7 @@ import staticdata from '../../staticdata.json'
 import Cell from "../components/Cell"
 import styled from "styled-components"
 import NoWaveSection from "../components/NoWaveSection"
-import '../components/css_pages/research.css'
+import '../components/css_pages/news.css'
 
 const SectionCaption = styled.p`
   font-weight: 600;
@@ -44,42 +44,41 @@ class NewsPostContentfulTemplate extends React.Component {
 
         return (
             <Layout>
-            <div className="Research">
-                <div className="ResearchGroup">
-                {/* <img src={require('../images/printg.png')} alt="" width="100"/> */}
+            <div className="News">
+                <div className="NewsGroup">
                     <h1>Nanotechnology and Graphene </h1>
                     <h1>Research Centre</h1>
                     <p> Transforming nanotechnology to solve real world problems</p>
-                    {/* <Link to="/page-2">Watch the vid!</Link> */}
-                    
-                {/* <Wave/> */}
                 </div>
+            </div>
+
+
+            <div className="Cards_news">
+                <div className="CardGroup_news">
+                    <h3>{post.judul_post}</h3>
+                    <h6>{post.tanggal}</h6>
+                    <div dangerouslySetInnerHTML={{ __html: post.kontenPost.childMarkdownRemark.html}}/>
+                        <h4>You may also want to read:</h4>
+                        <div className="double_figs">
+                            <h5>
+                                {previous && (
+                                    <Link to={previous.slug} rel="prev">
+                                        {previous.judul_post}
+                                    </Link>
+                                )}
+                            </h5>
+                            <h5>
+                                {next && (
+                                    <Link to={next.slug} rel="next">
+                                        {next.judul_post}
+                                    </Link>
+                                )}
+                            </h5>
+                        </div>
                 </div>
-                <h1>{post.judul_post}</h1>
-                <div dangerouslySetInnerHTML={{ __html: post.kontenPost.childMarkdownRemark.html}}/>
-                <ul style={{
-                    display: `flex`,
-                    flexWrap: `wrap`,
-                    justifyContent: `space-between`,
-                    listStyle: `none`,
-                    padding: 0,
-                }}
-                >
-                    <li>
-                        {previous && (
-                            <Link to={previous.slug} rel="prev">
-                                {previous.judul_post}
-                            </Link>
-                        )}
-                    </li>
-                    <li>
-                        {next && (
-                            <Link to={next.slug} rel="next">
-                                {next.judul_post}
-                            </Link>
-                        )}
-                    </li>
-                </ul>
+            </div>
+
+                
                 
             </Layout>
         )
@@ -99,6 +98,7 @@ export const pageQuery = graphql`
         contentfulPrintgNews( slug: { eq: $slug }) {
             judul_post
             author
+            tanggal(formatString: "dddd DD MMMM YYYY")
             kontenPost {
                 childMarkdownRemark {
                     html

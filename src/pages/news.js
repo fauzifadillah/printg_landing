@@ -12,6 +12,7 @@ import Cell from "../components/Cell"
 import styled from "styled-components"
 import NoWaveSection from "../components/NoWaveSection"
 import '../components/css_pages/research.css'
+import Img from "gatsby-image"
 
 const SectionCaption = styled.p`
   font-weight: 600;
@@ -32,6 +33,12 @@ const SectionCellGroup = styled.div`
     grid-template-columns: repeat(1, 1fr);
   }
 `
+
+const NewsImage = styled.div`
+  flex: 25%;
+  margin-right: 1rem;
+`
+
 // import { rhytm, scale } from '../utils/typography'
 
 class NewsPostContentfulIndex extends React.Component {
@@ -42,8 +49,9 @@ class NewsPostContentfulIndex extends React.Component {
 
         return (
             <Layout>
-                <div className="Research">
-                <div className="ResearchGroup">
+            <div>
+                <div className="News">
+                <div className="NewsGroup">
                 {/* <img src={require('../images/printg.png')} alt="" width="100"/> */}
                     <h1>Nanotechnology and Graphene </h1>
                     <h1>Research Centre</h1>
@@ -53,6 +61,9 @@ class NewsPostContentfulIndex extends React.Component {
                 {/* <Wave/> */}
                 </div>
                 </div>
+                <div className="Cards_news">
+                <h2>News</h2>
+                <div className="CardGroup_news">
                 {posts.map(({ node }) => {
                     const judul_post = node.judul_post || node.slug
                     return (
@@ -62,15 +73,20 @@ class NewsPostContentfulIndex extends React.Component {
                                     marginBottom: 0,
                                 }}
                             >
+                            
                                 <Link style={{ boxShadow: `none` }} to={node.slug}>
                                     {judul_post}
                                 </Link>
                             </h3>
+                            <h6>{node.tanggal}</h6>
                             <p>{node.deskripsi}</p>
+                            
                         </div>
                     )
                 })}
-                
+                </div>
+                </div>
+            </div>
             </Layout>
         )
     }
@@ -92,6 +108,12 @@ export const pageQuery = graphql`
                    deskripsi
                    author
                    slug
+                   dokumentasi {
+                    sizes {
+                        src
+                      }
+                  }
+                  tanggal(formatString: "dddd DD MMMM YYYY")
                }
            }
         }

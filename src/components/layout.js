@@ -45,7 +45,10 @@ const Layout = ({ children }) => {
         { name: 'description', content: data.site.siteMetadata.description },
         { name: 'author', content: data.site.siteMetadata.author },
       ]}
-    />    
+      
+    >
+      <script src="//code.tidio.co/x2jmlqdkkzomi1oq6c2v03lavyx61chd.js" async></script>
+    </Helmet>    
       <Header siteTitle={data.site.siteMetadata.title} />
         {children}
         <Footer data={data}>

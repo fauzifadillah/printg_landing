@@ -15,7 +15,7 @@ a {
 }
 
 .Hero {
-  background: url('../images/bokeh2.jpg');
+  background: url('../images/bg/bg_1.jpg');
   height: 920px;
   background-size: cover;
   background-position: center;
@@ -198,6 +198,7 @@ a {
     text-align: justify;
     hyphens: auto;
     position: relative;
+    font-size: 16px;
 }
 
 @media screen and (max-width: 720px) {
@@ -232,6 +233,7 @@ a {
     color: whitesmoke;
     text-align: justify;
     hyphens: auto;
+    font-size: 16px;
 }
 
 #hist_step3 {
@@ -249,6 +251,7 @@ a {
     color: whitesmoke;
     text-align: justify;
     hyphens: auto;
+    font-size: 16px;
 }
 
 @media screen and (max-width: 720px) { 

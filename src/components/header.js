@@ -1,7 +1,7 @@
 import { Link } from "gatsby"
 import React from "react"
 import headerStyle from './header.css'
-import logo from "../images/ico_unpad.ico" 
+import logo from "../images/unpad.png" 
 import hamburger from "../images/menu.png"
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // You can also use <link> for styles

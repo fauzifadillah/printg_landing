@@ -55,6 +55,12 @@ module.exports = {
         plugins: [],
       },
     },
+    {
+      resolve: "gatsby-plugin-load-script",
+      options: {
+        src: "code.tidio.co/x2jmlqdkkzomi1oq6c2v03lavyx61chd.js",
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
