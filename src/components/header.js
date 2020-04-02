@@ -1,6 +1,6 @@
 import { Link } from "gatsby"
 import React from "react"
-import headerStyle from './Header.css'
+import headerStyle from './header.css'
 import logo from "../images/ico_unpad.ico" 
 import hamburger from "../images/menu.png"
 import AOS from 'aos';
