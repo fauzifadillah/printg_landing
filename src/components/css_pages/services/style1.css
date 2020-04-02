@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin: 0;
+  font-size: 20px;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.3;
+}
+
+a {
+  color: #5334f5;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.services_2 {
+  background: url('../../../images/bokeh2.jpg');
+  height: 400px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.services_2Group{
+  margin: 0 auto 0 auto;
+  max-width: 1000px;
+  padding: 150px 50px;
+  text-align: center;
+}
+
+.services_2 h1 {
+  margin: 0;
+  color: white;
+  font-size: 40px;
+  font-weight: 400;
+  text-shadow: 1px 1px darkcyan;
+  line-height: 1.2;
+  opacity: 0;
+  animation: ResearchAnimation;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.2, 0.82, 0.2, 1);
+}
+
+.services_2 p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 30px;
+  line-height: 1.5;
+  font-style: italic;
+  animation: ResearchAnimation 3s forwards cubic-bezier(0.2, 0.82, 0.2, 1);
+}
+
+.services_2 a {
+  font-size: 17px;
+  font-weight: 600;
+  color: white;
+  text-transform: uppercase;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 9px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 20px;
+  transition: 0.8s cubic-bezier(0.2, 0.82, 0.2, 1)
+}
+
+.services_2 a:hover {
+  background: white;
+  color: black;
+}
+
+@media screen and (max-width: 640px) {
+  .services_2Group {
+    padding: 100px 20px;
+  }
+  
+  .services_2 h1 {
+    font-size: 40px;
+  }
+
+  .services_2 p {
+    font-size: 24px;
+  }
+}
+
+@keyframes ResearchAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.services_2 svg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.services_2 .Logos {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 40px;
+  margin: 100px 0;
+  justify-items: center;
+}
+
+@media (max-width: 640px) {
+  .services_2 .Logos {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.Cards_services_2 h2 {
+  margin:  50px 20px;
+  font-size: 35px;
+  text-align: center;
+  font-weight: 700;
+  background: linear-gradient(104deg, #050a27 0%, #4a548c 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.Cards_services_2 h3 {
+  margin:  50px 20px;
+  font-size: 22px;
+  text-align: center;
+  font-weight: 700;
+  background: linear-gradient(104deg, #050a27 0%, #4a548c 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.CardGroup_services_2 {
+  margin: 50px 40px 100px;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 40px;
+  /* justify-items: left; */
+  justify-items: center;
+  overflow: auto;
+}
+
+.double_fig {
+  margin: 50px 40px 100px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 40px;
+  /* justify-items: left; */
+  justify-items: center;
+  overflow: auto;
+}
+
+.triple_fig {
+  margin: 50px 40px 100px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 40px;
+  /* justify-items: left; */
+  justify-items: center;
+  overflow: auto;
+}
+
+.CardGroup_services_2 p{
+  text-align: justify;
+}
+
+
+
+@media (max-width: 1060px) {
+  .CardGroup_services_2 {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (max-width: 720px) {
+  .CardGroup_services_2 {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.Cards_services_2 .CardGroup_services_2 h4 {
+  font-weight: 400;
+  color: darkorange;
+  text-align: left;
+}
+
+.Cards_services_2 .CardGroup_services_2 h4:hover {
+  font-weight: 400;
+  color: cornflowerblue;
+}
+
+.pub_class li{
+    /* display: none; */
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+.pub_class a:hover{
+    /* display: none; */
+    color: darkorange;
+}
+
+#before-2015 :hover {
+    color: darkorange;
+}
+
+#Perkin-Elmer-LS55 {
+    display: block;
+    margin: 0 auto;
+    border: thin darkorange solid;
+    width: 30%;
+    height: 40%;
+}
+
+#rigaku {
+    display: block;
+    margin: 0 auto;
+    border: thin darkorange solid;
+    width: 30%;
+    height: 40%;
+}
+
+#alatukurbatere {
+    display: block;
+    margin: 0 auto;
+    border: thin darkorange solid;
+    width: 30%;
+    height: 40%;
+}
+
+#Horiba_SZ-100 {
+    display: block;
+    margin: 0 auto;
+    border: thin darkorange solid;
+    width: 30%;
+    height: 40%;
+}
+
+#FTIR {
+    display: block;
+    margin: 0 auto;
+    border: thin darkorange solid;
+    width: 30%;
+    height: 40%;
+}

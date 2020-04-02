@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin: 0;
+  font-size: 20px;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.3;
+}
+
+a {
+  color: #5334f5;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.Products {
+  background: url('../../images/bokeh2.jpg');
+  height: 400px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.ProductsGroup{
+  margin: 0 auto 0 auto;
+  max-width: 1000px;
+  padding: 150px 50px;
+  text-align: center;
+}
+
+.Products h1 {
+  margin: 0;
+  color: white;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 1.2;
+  opacity: 0;
+  animation: ProductsAnimation;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.2, 0.82, 0.2, 1);
+}
+
+.Products p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 30px;
+  line-height: 1.5;
+  font-style: italic;
+  animation: ProductsAnimation 2s forwards cubic-bezier(0.2, 0.82, 0.2, 1);
+}
+
+.Products a {
+  font-size: 17px;
+  font-weight: 600;
+  color: white;
+  text-transform: uppercase;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 9px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 20px;
+  transition: 0.8s cubic-bezier(0.2, 0.82, 0.2, 1)
+}
+
+.Products a:hover {
+  background: white;
+  color: black;
+}
+
+@media screen and (max-width: 640px) {
+  .ProductsGroup {
+    padding: 100px 20px;
+  }
+  
+  .Products h1 {
+    font-size: 40px;
+  }
+
+  .Products p {
+    font-size: 24px;
+  }
+}
+
+@keyframes ProductsAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.Products svg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.Products .Logos {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 40px;
+  margin: 100px 0;
+  justify-items: center;
+}
+
+@media (max-width: 640px) {
+  .Products .Logos {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.Cards h2 {
+  margin:  50px 20px;
+  font-size: 35px;
+  text-align: center;
+  font-weight: 700;
+  background: linear-gradient(104deg, #050a27 0%, #4a548c 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.Cards h3 {
+  margin:  50px 20px;
+  font-size: 22px;
+  text-align: justify;
+  font-weight: 700;
+  background: linear-gradient(104deg, #050a27 0%, #4a548c 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.Cards h5 {
+    /* margin:  50px 20px; */
+    font-size: 22px;
+    text-align: center;
+    font-weight: 500;
+    background: linear-gradient(104deg, #050a27 0%, #4a548c 100%);
+    text-decoration: underline;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+.CardGroups {
+  margin: 50px 40px 100px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 40px;
+  /* justify-items: left; */
+  justify-items: center;
+}
+
+@media (max-width: 1060px) {
+  .CardGroups {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 720px) {
+  .CardGroups {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.Cards .CardGroup h4 {
+  font-weight: 400;
+  color: darkorange;
+  text-align: justify;
+}
+
+.Cards .CardGroup h4:hover {
+  font-weight: 400;
+  color: cornflowerblue;
+}
